@@ -6,7 +6,7 @@
           <icon name="chart-bar"></icon>
         </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">任务通过率</span>
+          <span class="fs-xl text mx-2">聚类类别数</span>
           <dv-decoration-3 style="width:100px;height:20px; position:relative;top:-3px;" />
         </div>
       </div>
@@ -17,12 +17,11 @@
       <div class="bottom-data">
         <div class="item-box" v-for="(item,index) in numberData" :key="index">
           <div class="d-flex">
-            <span class="coin">￥</span>
             <dv-digital-flop :config="item.number" style="width:200px;height:50px;" />
           </div>
           <p class="text" style="text-align: center;">
             {{item.text}}
-            <span class="colorYellow">(件)</span>
+            <span class="colorYellow">(数量)</span>
           </p>
         </div>
       </div>
@@ -66,35 +65,35 @@ export default {
       numberData: [
         {
           number: {
-            number: [15],
+            number: [3256],
             toFixed: 1,
             content: "{nt}"
           },
-          text: "今日构建总量"
+          text: "类别2"
         },
         {
           number: {
-            number: [1144],
+            number: [2697],
             toFixed: 1,
             content: "{nt}"
           },
-          text: "总共完成数量"
+          text: "类别1"
         },
         {
           number: {
-            number: [361],
+            number: [4203],
             toFixed: 1,
             content: "{nt}"
           },
-          text: "正在编译数量"
+          text: "类别4"
         },
         {
           number: {
-            number: [157],
+            number: [1404],
             toFixed: 1,
             content: "{nt}"
           },
-          text: "未通过数量"
+          text: "类别3"
         }
       ]
     };

@@ -52,18 +52,16 @@ export default {
         },
         series: [
           {
-            name: "增值电信业务统计表",
+            name: "数据类别",
             type: "pie",
             radius: [10, 60],
             roseType: "area",
             center: ["50%", "40%"],
             data: [
-              { value: 10, name: "rose1" },
-              { value: 5, name: "rose2" },
-              { value: 15, name: "rose3" },
-              { value: 25, name: "rose4" },
-              { value: 20, name: "rose5" },
-              { value: 35, name: "rose6" }
+              { value: 2697, name: '类1' },
+              { value: 3256, name: '类2' },
+              { value: 1404, name: '类3' },
+              { value: 4203, name: '类4' }
             ]
           }
         ]

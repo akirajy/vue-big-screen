@@ -25,18 +25,7 @@ export default {
         angleAxis: {
           interval: 1,
           type: "category",
-          data: [
-            "there1",
-            "there2",
-            "there3",
-            "there4",
-            "there5",
-            "there6",
-            "there7",
-            "there8",
-            "there9",
-            "there10 "
-          ],
+          data: ['0°-30°', '30°-60°', '60°-90°', '90°-120°', '120°-150°', '150°-180°', '180°-210°', '210°-240°', '240°-270°', '270°-300°', '300°-330°', '330°-360°'],
           z: 10,
           axisLine: {
             show: true,
@@ -104,7 +93,7 @@ export default {
             radius: ["20%", "100%"],
             data: [
               {
-                value: 87,
+                value: 22.3,
                 itemStyle: {
                   normal: {
                     color: "#f54d4d"
@@ -112,7 +101,7 @@ export default {
                 }
               },
               {
-                value: 80,
+                value: 4.5,
                 itemStyle: {
                   normal: {
                     color: "#f87544"
@@ -120,7 +109,7 @@ export default {
                 }
               },
               {
-                value: 75,
+                value: 88.0,
                 itemStyle: {
                   normal: {
                     color: "#ffae00"
@@ -128,7 +117,7 @@ export default {
                 }
               },
               {
-                value: 69,
+                value: 89.2,
                 itemStyle: {
                   normal: {
                     color: "#dcff00"
@@ -136,7 +125,7 @@ export default {
                 }
               },
               {
-                value: 63,
+                value: 25.8,
                 itemStyle: {
                   normal: {
                     color: "#25d053"
@@ -144,7 +133,7 @@ export default {
                 }
               },
               {
-                value: 54,
+                value: 135.4,
                 itemStyle: {
                   normal: {
                     color: "#01fff5"
@@ -152,7 +141,7 @@ export default {
                 }
               },
               {
-                value: 47,
+                value: 77.6,
                 itemStyle: {
                   normal: {
                     color: "#007cff"
@@ -160,7 +149,7 @@ export default {
                 }
               },
               {
-                value: 40,
+                value: 18.7,
                 itemStyle: {
                   normal: {
                     color: "#4245ff"
@@ -168,7 +157,7 @@ export default {
                 }
               },
               {
-                value: 35,
+                value: 19.5,
                 itemStyle: {
                   normal: {
                     color: "#c32eff"
@@ -176,10 +165,26 @@ export default {
                 }
               },
               {
-                value: 33,
+                value: 56.2,
                 itemStyle: {
                   normal: {
                     color: "#ff62e8"
+                  }
+                }
+              },
+              {
+                value: 19.6,
+                itemStyle: {
+                  normal: {
+                    color: "#db35b5"
+                  }
+                }
+              },
+              {
+                value: 148.9,
+                itemStyle: {
+                  normal: {
+                    color: "#7351a0"
                   }
                 }
               }

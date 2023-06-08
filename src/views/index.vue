@@ -48,7 +48,7 @@
               style="width: 500px; background-color: #0f1325; text-align: right;"
             >
               <span class="react-after"></span>
-              <span class="text">2020年03月16日 周一 12:00</span>
+              <span class="text">{{currentTime}}</span>
             </div>
           </div>
         </div>
@@ -66,11 +66,9 @@
                 <centreLeft2 />
               </dv-border-box-12>
             </div>
-            <!-- 中间 -->
             <div>
               <center />
             </div>
-            <!-- 中间 -->
             <div>
               <centreRight2 />
             </div>
@@ -82,14 +80,14 @@
           </div>
 
           <!-- 第四行数据 -->
-          <div class="bototm-box">
+          <!-- <div class="bototm-box">
             <dv-border-box-13>
               <bottomLeft />
             </dv-border-box-13>
             <dv-border-box-12>
               <bottomRight />
             </dv-border-box-12>
-          </div>
+          </div> -->
         </div>
       </div>
     </dv-full-screen-container>
@@ -99,34 +97,62 @@
 <script>
 import centreLeft1 from "./centreLeft1";
 import centreLeft2 from "./centreLeft2";
-import centreRight1 from "./centreRight1";
-import centreRight2 from "./centreRight2";
-import center from "./center";
-import bottomLeft from "./bottomLeft";
-import bottomRight from "./bottomRight";
+// import centreRight1 from "./centreRight1";
+// import centreRight2 from "./centreRight2";
+// import center from "./center";
+// import bottomLeft from "./bottomLeft";
+// import bottomRight from "./bottomRight";
 export default {
   data() {
     return {
-      loading: true
+      loading: true,
+      currentTime: ''
     };
   },
   components: {
     centreLeft1,
     centreLeft2,
-    centreRight1,
-    centreRight2,
-    center,
-    bottomLeft,
-    bottomRight
+    // centreRight1,
+    // centreRight2,
+    // center,
+    // bottomLeft,
+    // bottomRight
   },
   mounted() {
     this.cancelLoading();
+    this.updateCurrentTime();
   },
   methods: {
     cancelLoading() {
       setTimeout(() => {
         this.loading = false;
       }, 2000);
+    },
+    updateCurrentTime() {
+      setInterval(() => {
+        this.getCurrentTime()
+      }, 1000);
+    },
+    getCurrentTime() {
+      function repair(i){
+        if (i >= 0 && i <= 9) {
+            return "0" + i;
+        } else {
+            return i;
+        }
+      }
+
+      let date = new Date();//当前时间
+      let year = date.getFullYear() //返回指定日期的年份
+      let month = repair(date.getMonth() + 1);//月
+      let day = repair(date.getDate());//日
+      let hour = repair(date.getHours());//时
+      let minute = repair(date.getMinutes());//分
+      let second = repair(date.getSeconds());//秒
+      
+      //当前时间 
+      let curTime = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+      this.currentTime = curTime
     }
   }
 };
